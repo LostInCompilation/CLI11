@@ -255,9 +255,11 @@ CLI11_INLINE std::string &add_quotes_if_needed(std::string &str) {
     return str;
 }
 
-CLI11_INLINE std::ostream&
-streamOutAsParagraphWithLinePrefix(std::ostream& out, const std::string& text, std::size_t paragraphWidth,
-                                    const std::string& linePrefix, bool skipPrefixOnFirstLine) {
+CLI11_INLINE std::ostream &streamOutAsParagraphWithLinePrefix(std::ostream &out,
+                                                              const std::string &text,
+                                                              std::size_t paragraphWidth,
+                                                              const std::string &linePrefix,
+                                                              bool skipPrefixOnFirstLine) {
     // Do we even have line wrapping?
     const std::size_t firstLineSize = text.size() + (skipPrefixOnFirstLine ? 0 : linePrefix.size());
     if(firstLineSize <= paragraphWidth) {
@@ -267,7 +269,7 @@ streamOutAsParagraphWithLinePrefix(std::ostream& out, const std::string& text, s
     }
 
     if(!skipPrefixOnFirstLine)
-        out << linePrefix; // First line prefix
+        out << linePrefix;  // First line prefix
 
     std::istringstream lss(text);
     std::string line = "";

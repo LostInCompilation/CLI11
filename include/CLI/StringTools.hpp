@@ -225,8 +225,11 @@ CLI11_INLINE std::string &add_quotes_if_needed(std::string &str);
 
 /// This function formats the given text as a paragraph with fixed width and applies correct line wrapping
 /// with a custom line prefix. The paragraph will get streamed to the given ostrean.
-CLI11_INLINE std::ostream& streamOutAsParagraphWithLinePrefix(std::ostream& out, const std::string& text,
-    std::size_t paragraphWidth, const std::string& linePrefix, bool skipPrefixOnFirstLine = false);
+CLI11_INLINE std::ostream &streamOutAsParagraphWithLinePrefix(std::ostream &out,
+                                                              const std::string &text,
+                                                              std::size_t paragraphWidth,
+                                                              const std::string &linePrefix,
+                                                              bool skipPrefixOnFirstLine = false);
 
 }  // namespace detail
 
