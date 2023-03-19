@@ -228,7 +228,7 @@ CLI11_INLINE std::string &add_quotes_if_needed(std::string &str);
 CLI11_INLINE std::ostream &streamOutAsParagraphWithLinePrefix(std::ostream &out,
                                                               const std::string &text,
                                                               std::size_t paragraphWidth,
-                                                              const std::string &linePrefix,
+                                                              const std::string &linePrefix = "",
                                                               bool skipPrefixOnFirstLine = false);
 
 }  // namespace detail
